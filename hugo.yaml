@@ -1,3 +1,41 @@
-baseURL: https://example.org/
-languageCode: en-us
-title: My New Hugo Site
+baseurl: "https://example.org/"  # please update this to your actual URL
+languageCode: "en-us"
+title: "Karso_sp"
+theme: "hugo-xmin"
+googleAnalytics: ""
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  note: "/note/:slug/"
+  post: "/post/:year/:month/:day/:slug/"
+  essay: "/essay/:slug/"
+  blog: "/blog/:year/:month/:day/:slug/"
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: About
+      url: "about/"
+      weight: 2
+    - name: Blogs 
+      url: "blog/"
+      weight: 3
+    - name: Essays
+      url: "essay/"
+      weight: 4
+    - name: Notes 
+      url: "note/"
+      weight: 5
+    - name: Tags
+      url: "tags/"
+      weight: 6
+    - name: Subscribe
+      url: "index.xml"
+      weight: 7
+params:
+  description: "A personal website of Karso"
+  footer: "&copy; [Karso](https://karsosp.com) 2026 -- {Year} | [X/Twitter](https://x.com/karso_sp)"
+

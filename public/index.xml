@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Karso_sp</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Karso_sp</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>first blog post</title>
+      <link>http://localhost:1313/blog/2025/12/16/first-blog-post/</link>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2025/12/16/first-blog-post/</guid>
+      <description>&lt;h1 id=&#34;heading-1&#34;&gt;Heading 1&lt;/h1&gt;&#xA;&lt;p&gt;This is the first blog. Hello world.&lt;/p&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras eget sollicitudin massa. Nullam quis leo vitae velit cursus semper. Curabitur fringilla, nulla non suscipit convallis, dui justo condimentum nisi, sit amet cursus ligula nisi quis est. Morbi vel ante congue, pulvinar ipsum condimentum, scelerisque eros. Phasellus non vulputate quam. Proin et quam quis dolor lacinia euismod ac sed lacus. Fusce ullamcorper ex in pellentesque vulputate. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sem neque, consequat non eleifend eu, efficitur non diam. Donec eu dolor ac magna finibus fringilla mattis ac augue. Proin mattis, justo ut faucibus rutrum, massa ipsum pulvinar quam, non porta sapien est sit amet erat. Donec nisl orci, luctus et sem at, efficitur iaculis turpis. Donec sed quam et nibh pulvinar sollicitudin ut vitae metus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>test</title>
+      <link>http://localhost:1313/essay/test/</link>
+      <pubDate>Tue, 16 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/essay/test/</guid>
+      <description>&lt;h1 id=&#34;test&#34;&gt;Test&lt;/h1&gt;&#xA;&lt;p&gt;This is a test.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Another Note on A blogdown Tutorial</title>
+      <link>http://localhost:1313/note/another-note-on-a-blogdown-tutorial/</link>
+      <pubDate>Wed, 14 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/note/another-note-on-a-blogdown-tutorial/</guid>
+      <description>&lt;p&gt;I just discovered &lt;a href=&#34;https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/&#34;&gt;an awesome tutorial&lt;/a&gt; on &lt;strong&gt;blogdown&lt;/strong&gt; written by Alison. I have to admit this is &lt;em&gt;the&lt;/em&gt; best &lt;strong&gt;blogdown&lt;/strong&gt; tutorial I have seen so far.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.apreshill.com/blog/2020-12-new-year-new-blogdown/03-blogdown-2021.png&#34; alt=&#34;Alison&amp;rsquo;s blogdown tutorial&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Quick Note on Two Beautiful Websites</title>
+      <link>http://localhost:1313/note/a-quick-note/</link>
+      <pubDate>Tue, 13 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/note/a-quick-note/</guid>
+      <description>&lt;p&gt;To me, the two most impressive websites based on &lt;strong&gt;blogdown&lt;/strong&gt; are:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://robjhyndman.com&#34;&gt;Rob J Hyndman&lt;/a&gt;&amp;rsquo;s personal website.&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://livefreeordichotomize.com&#34;&gt;Live Free or Dichotomize&lt;/a&gt; by Lucy and Nick &lt;em&gt;et al&lt;/em&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;I&amp;rsquo;m sure there will be more.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A Plain Markdown Post</title>
+      <link>http://localhost:1313/post/2016/02/14/a-plain-markdown-post/</link>
+      <pubDate>Sun, 14 Feb 2016 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/2016/02/14/a-plain-markdown-post/</guid>
+      <description>&lt;p&gt;This sample post is mainly for&#xA;&lt;a href=&#34;https://github.com/rstudio/blogdown&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; users. If you do not use&#xA;&lt;strong&gt;blogdown&lt;/strong&gt;, you can skip the first section.&lt;/p&gt;&#xA;&lt;h1 id=&#34;1-markdown-or-r-markdown&#34;&gt;1. Markdown or R Markdown&lt;/h1&gt;&#xA;&lt;p&gt;This is a post written in plain Markdown (&lt;code&gt;*.md&lt;/code&gt;) instead of R Markdown&#xA;(&lt;code&gt;*.Rmd&lt;/code&gt;). The major differences are:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;You cannot run any R code in a plain Markdown document, whereas in an R&#xA;Markdown document, you can embed R code chunks (&lt;code&gt;```{r}&lt;/code&gt;);&lt;/li&gt;&#xA;&lt;li&gt;A plain Markdown post is rendered through&#xA;&lt;a href=&#34;https://gohugo.io/overview/configuration/&#34;&gt;Goldmark&lt;/a&gt; by default, and an R&#xA;Markdown document is compiled by&#xA;&lt;a href=&#34;http://rmarkdown.rstudio.com&#34;&gt;&lt;strong&gt;rmarkdown&lt;/strong&gt;&lt;/a&gt; and&#xA;&lt;a href=&#34;http://pandoc.org&#34;&gt;Pandoc&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;There are differences in syntax between Goldmark&amp;rsquo;s Markdown and Pandoc&amp;rsquo;s&#xA;Markdown. For example, Goldmark does not support LaTeX math and Pandoc does. I&#xA;have added the KaTeX support to this theme (i.e.,&#xA;&lt;a href=&#34;https://github.com/yihui/hugo-xmin&#34;&gt;hugo-xmin&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About This Site</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m nobody who is interested in science, philosophy, and a lot other thingss,&#xA;and this is my personal website where i would express myself through writing.&#xA;The current internet and the whole ecosystem of it is just full of distraction,&#xA;AI-slop, and attention-mining advertisement. The hope of creating this site is&#xA;to fight those by creating this personal &amp;ldquo;digital garden&amp;rdquo;, thus i can be more&#xA;thoughtful and intentional in consuming stuffs from the internet.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
