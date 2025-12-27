@@ -40,6 +40,9 @@ Alternatively, you may see
 [this post](https://yihui.org/en/2018/07/latex-math-markdown/) for a general
 solution, which works with any Hugo version and requires no configuration.
 
+For example: 
+`$$ x^2 + y^2 = 2 $$`
+
 When creating a new post, you have to decide whether the post format is Markdown
 or R Markdown, and this can be done via the `rmd` argument of the function
 `blogdown::new_post()`, e.g.

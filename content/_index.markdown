@@ -18,7 +18,7 @@ thing.
 
 ## [Essays](/essay/)
 I do genuinely think that writing essay is the best way to learn. It differ from
-notes, in that the notes only a recollection of knowledge which is learned
+notes, in that the notes is only a recollection of knowledge which is learned
 through reading, while essay is mostly about argumentation and view on some
 things. By writing essay, i do believe that we force our mind to really
 systematize our logical argumentation before talking our takes.

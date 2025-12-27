@@ -39,3 +39,21 @@ params:
   description: "A personal website of Karso"
   footer: "&copy; [Karso](https://karsosp.com) 2026 -- {Year} | [X/Twitter](https://x.com/karso_sp)"
 
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+          - - \[
+            - \]
+          - - $$
+            - $$
+          inline:
+          - - \(
+            - \)
