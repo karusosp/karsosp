@@ -1,0 +1,9 @@
+# Hugo output
+/public/
+# Hugo cache
+/resources/_gen/
+# Editor and OS
+.DS_Store
+Thumbs.db
+*.swp
+
