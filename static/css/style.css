@@ -61,16 +61,56 @@ ul, ol {
   padding-left: 1.5rem;
 }
 
-
-/* header and footer areas */
-.menu { padding: 0; }
-.menu li { display: inline-block; }
-.article-meta, .menu a {
-  text-decoration: none;
-  background: #eee;
-  padding: 5px;
-  border-radius: 5px;
+/*------------------------------------------------------
+        List of Posts: Creating Box-Border
+------------------------------------------------------*/
+.post-list {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 0 5px;
 }
+
+/* Customizing The Text Inside The Box */
+.post-list h3, p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+/*------------------------------------------------------
+                    Navigation Bar
+------------------------------------------------------*/
+
+nav {
+  background-color: rgb(250 250 250 / 5%);
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 1px solid black; 
+}
+
+.navigation-bar ul {
+  display: flex;
+  gap: 1rem; 
+}
+
+.navigation-bar li {
+  list-style: none;
+}
+
+.navigation-bar a {
+  padding: 0.4rem 0.8rem;
+  text-decoration: none;
+  color: darkblue;
+}
+
+.navigation-bar a:hover {
+  color: #000;
+  border-color: #000;
+}
+
 .menu, .article-meta, footer { text-align: center; }
 .title { font-size: 1.1em; }
 footer a { text-decoration: none; }
@@ -98,6 +138,7 @@ blockquote {
   padding: 3px 1em 3px;
 }
 
+/* Table */
 table {
   margin: auto;
   border-top: 1px solid #666;
@@ -106,3 +147,16 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+/*-------------------------------------------------
+*                   Footer 
+* --------------------------------------------------*/
+footer {
+  border-top: 1px black solid
+}
+
+footer p{
+  text-align: center;
+  font-size: 14px;
+  line-height: 0.3em;
+}

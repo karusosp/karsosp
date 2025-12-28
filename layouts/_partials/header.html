@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
-    {{ partial "head_custom.html" . }}
-  </head>
-
   <body>
-    <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <hr/>
+    <nav class = "navigation-bar">
+      <a href="/">Home</a>
+      <a href="/blog">Blogs</a>
+      <a href="/essay">Essays</a>
+      <a href="/note">Notes</a>
+      <a href="/about">About</a>
     </nav>
+</html>

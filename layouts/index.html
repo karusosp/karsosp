@@ -1,22 +1,6 @@
 {{ define "main" }}
-<article class="home-intro">
-  <header>
-    <h1>{{ .Site.Title }}</h1>
-    {{ with .Site.Params.description }}
-      <p>{{ . }}</p>
-    {{ end }}
-  </header>
-</article>
-
-<section class="home-sections">
-  {{ range .Sections }}
-    <article class="section-listing">
-      <h2><a href="{{ .Permalink }}">{{ humanize .Title }}</a></h2>
-      {{ with .Params.summary }}
-        <p>{{ . }}</p>
-      {{ end }}
-    </article>
-  {{ end }}
-</section>
+<div class = "home-content">
+{{ .Content }}
+</div>
 {{ end }}
 

@@ -1,29 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Site Title / SEO -->
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
-
-  <!-- CSS: your consolidated single CSS -->
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-</head>
-
-<body>
-  <header>
-    {{ partial "header.html" . }}
-  </header>
-
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  <footer>
-    {{ partial "footer.html" . }}
-  </footer>
-
-</body>
+<html>
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "footer.html" . -}}
+  </body>
 </html>
-

@@ -1,9 +1,6 @@
   <footer>
-  {{ partial "foot_custom.html" . }}
-  {{ with .Site.Params.footer }}
-  <hr/>
-  {{ replace . "{Year}" now.Year | markdownify }}
-  {{ end }}
+      <p>This personal site is generated using <a href= "https://gohugo.io/">hugo </a> site generator</p>
+      <p>Every opinion and ideas belong to the author only and not representing
+         any other entities. </p>
+          
   </footer>
-  </body>
-</html>
