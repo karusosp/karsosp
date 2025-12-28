@@ -1,13 +1,11 @@
-{{ partial "header.html" . }}
-
-<h1>{{ .Title }}</h1>
-
-<ul class="terms">
-  {{ range .Pages }}
-  <li>
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})
-  </li>
+{{ define "main" }}
+<section class="terms">
+  <h1>{{ .Title }}</h1>
+  <ul>
+  {{ range .Data.Terms.Alphabetical }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .LinkTitle }}</a></li>
   {{ end }}
-</ul>
+  </ul>
+</section>
+{{ end }}
 
-{{ partial "footer.html" . }}
