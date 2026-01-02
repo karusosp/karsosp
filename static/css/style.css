@@ -194,6 +194,9 @@ footer {
 footer p {
   font-size: 13px;
   line-height: 1.2;
+  max-width: 30 rem;
+  margin:0.5rem auto;
+  text-align:left;
 }
 
 /* --------------------------------------------------
@@ -227,5 +230,9 @@ footer p {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  footer p{
+    text-align: center;
+    }
 }
 
