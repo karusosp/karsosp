@@ -2,98 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
 
 /* --------------------------------------------------
-   Base Typography & Rhythm
+   Base Layout (Mobile First)
 -------------------------------------------------- */
 
-/* Body */
-body {
-  max-width:45em;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  font-family: 'Merriweather', serif;
-  font-size: 18px;
-  line-height: 1.65;
-  color: #111;
+* {
+  box-sizing: border-box;
 }
 
-/* Color */
 body {
+  margin: 0 auto;
+  padding: 0.75rem;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  line-height: 1.6;
   color: #222;
   background-color: #fff;
 }
 
-
 /* Limit measure for readability */
 main, article, section {
-  max-width: 45em;
+  max-width: 45rem;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
-/* Headings */
+/* --------------------------------------------------
+   Typography
+-------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  margin-top: 0.6em;
-  margin-bottom: 0.6em;
   line-height: 1.25;
   color: #000;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
 }
 
-/* Hierarchical sizing */
-h1 { font-size: 2.6rem; }
-h2 { font-size: 2.0rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
+h1 { font-size: 2.0rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.4rem; }
+h4 { font-size: 1.2rem; }
 
-/* Paragraphs */
 p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.2rem;
 }
 
 /* Lists */
 ul, ol {
-  margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
+  margin-bottom: 1.2rem;
+  padding-left: 1.25rem;
 }
 
-/*------------------------------------------------------
-        List of Posts: Creating Box-Border
-------------------------------------------------------*/
-.post-list {
-  list-style: none;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin: 10px;
-  padding: 0 5px;
-}
-
-/* Customizing The Text Inside The Box */
-.post-list h3, p {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-
-/*------------------------------------------------------
-                    Navigation Bar
-------------------------------------------------------*/
+/* --------------------------------------------------
+   Navigation Bar
+-------------------------------------------------- */
 
 nav {
   background-color: rgb(250 250 250 / 5%);
-  padding: 20px;
-  font-size: 24px;
+  padding: 0.75rem;
+  font-size: 18px;
   text-align: center;
-  border-bottom: 1px solid black; 
+  border-bottom: 1px solid black;
 }
 
 .navigation-bar ul {
   display: flex;
-  gap: 1rem; 
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0;
+  margin: 0;
 }
 
 .navigation-bar li {
@@ -101,62 +80,152 @@ nav {
 }
 
 .navigation-bar a {
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   text-decoration: none;
   color: darkblue;
 }
 
 .navigation-bar a:hover {
   color: #000;
-  border-color: #000;
 }
 
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
-footer a { text-decoration: none; }
+/* --------------------------------------------------
+   Post List
+-------------------------------------------------- */
+
+.post-list {
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0.75rem 0;
+  padding: 0.5rem 0;
+}
+
+.post-list h3,
+.post-list p {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+/* --------------------------------------------------
+   Misc Elements
+-------------------------------------------------- */
+
+.menu,
+.article-meta,
+footer {
+  text-align: center;
+}
+
+.title {
+  font-size: 1.05em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
 hr {
   border-style: dashed;
   color: #ddd;
 }
 
-/* code */
+/* Code */
 pre {
   border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
-  padding: 1em;
+  box-shadow: 3px 3px 3px #eee;
+  padding: 0.75em;
   overflow-x: auto;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
 
-/* misc elements */
-img, iframe, video { max-width: 100%; }
-main { hyphens: auto; }
+code {
+  background: #f9f9f9;
+}
+
+pre code {
+  background: none;
+}
+
+/* Media */
+img,
+iframe,
+video {
+  max-width: 100%;
+}
+
+/* Quotes */
 blockquote {
   background: #f9f9f9;
   border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+  padding: 0.5em 1em;
 }
 
-/* Table */
+/* Tables */
 table {
   margin: auto;
   border-top: 1px solid #666;
   border-bottom: 1px solid #666;
 }
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #eee; }
 
-/*-------------------------------------------------
-*                   Footer 
-* --------------------------------------------------*/
+table thead th {
+  border-bottom: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+thead,
+tfoot,
+tr:nth-child(even) {
+  background: #eee;
+}
+
+/* --------------------------------------------------
+   Footer
+-------------------------------------------------- */
+
 footer {
-  border-top: 1px black solid
+  border-top: 1px solid black;
+  margin-top: 2rem;
 }
 
-footer p{
-  text-align: center;
-  font-size: 14px;
-  line-height: 0.3em;
+footer p {
+  font-size: 13px;
+  line-height: 0.2rem;
 }
+
+/* --------------------------------------------------
+   Desktop Enhancements
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  body {
+    font-size: 18px;
+    line-height: 1.65;
+    padding: 1rem;
+  }
+
+  h1 { font-size: 2.6rem; }
+  h2 { font-size: 2.0rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.4rem; }
+
+  nav {
+    font-size: 24px;
+    padding: 1.25rem;
+  }
+
+  .post-list {
+    margin: 1rem;
+  }
+
+  .post-list h3,
+  .post-list p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
