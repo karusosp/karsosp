@@ -82,12 +82,13 @@ nav {
 .navigation-bar a {
   padding: 0.3rem 0.6rem;
   text-decoration: none;
-  color: darkgreen;
+  color: black;
 }
 
 .navigation-bar a:hover {
-  color: #000;
+  color: darkgreen;
 }
+
 
 
 
@@ -98,7 +99,6 @@ nav {
 .post-list {
   list-style: none;
   border: 1px solid black;
-  border-radius: 10px;
   margin: 0.75rem 0;
   padding: 0.5rem 0;
 }
@@ -209,12 +209,66 @@ footer p {
   text-align:left;
 }
 
+
+/* Home */
+.home-description p {
+  text-align: center;
+}
+.home-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.home-box {
+  border: 1px dashed #000;
+  padding: 1.5rem;
+}
+
+.home-box p {
+  text-size: 0.9rem;
+}
+
+.home-box h2 {
+  margin-top: 0;
+}
+
+.home-box h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-box h2 a:hover {
+  text-decoration: underline;
+  color: darkgreen;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: darkgreen;
+}
+
+
+/* Home Image */ 
+.home-image {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: block;
+  margin: 0 auto;
+}
+
 /* --------------------------------------------------
-   Desktop Enhancements
+   Desktop Specific Style
 -------------------------------------------------- */
 
 @media (min-width: 768px) {
-
   body {
     font-size: 18px;
     line-height: 1.65;
@@ -231,14 +285,10 @@ footer p {
     padding: 1.25rem;
   }
 
-  .post-list {
-    margin: 1rem;
-  }
-
-  .post-list h3,
-  .post-list p {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .post-list, .home-content {
+    margin: 2rem;
+    padding-left: 2rem;
+    paading-right: 2rem;
   }
 
   footer p{
@@ -251,3 +301,39 @@ footer p {
     border-left: 5px solid #DCDCDC;
     padding: 0.5em 1em;
   }
+
+/*-----------------------------------------
+*                 Home 
+* ----------------------------------------*/
+  
+/* Making boxes for each section */
+  .home-sections {
+    max-width: 900 px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+
+  .home-box {
+    border: 1px dashed #000;
+    padding: 1.5rem;
+  }
+
+  .home-box h2 {
+    margin-top: 0;
+  }
+  .home-box p {
+    font-size: 0.9rem;
+  }
+  .home-box h2 a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .home-box h2 a:hover {
+    text-decoration: underline;
+  }
+
+
