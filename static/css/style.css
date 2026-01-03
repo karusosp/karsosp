@@ -20,7 +20,7 @@ body {
 }
 
 /* Limit measure for readability */
-main, article, section {
+main, article, section, footer {
   max-width: 45rem;
   margin-left: auto;
   margin-right: auto;
@@ -115,16 +115,8 @@ nav {
 
 .menu,
 .article-meta,
-footer {
-  text-align: center;
-}
-
 .title {
   font-size: 1.05em;
-}
-
-footer a {
-  text-decoration: none;
 }
 
 hr {
@@ -198,15 +190,15 @@ tr:nth-child(even) {
 
 footer {
   border-top: 1px solid black;
-  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 footer p {
   font-size: 13px;
-  line-height: 1.2;
+  line-height: 1rem;
   max-width: 30 rem;
   margin:0.5rem auto;
-  text-align:left;
+  text-align:center;
 }
 
 
@@ -214,9 +206,9 @@ footer p {
 .home-description p {
   text-align: center;
 }
+
 .home-sections {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
   margin: 3rem 0;
 }
@@ -336,4 +328,16 @@ a:hover {
     text-decoration: underline;
   }
 
+@media (max-width: 768px) {
+  .home-sections {
+    grid-template-columns: 1fr}
+  .site-footer {
+    text-align: center;
+  }
 
+  .site-footer p {
+    padding: 20rem;
+    line-height: 1.4;
+  }
+}
+}
