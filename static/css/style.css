@@ -20,7 +20,7 @@ body {
 }
 
 /* Limit measure for readability */
-main, article, section, footer {
+main, article, section {
   max-width: 45rem;
   margin-left: auto;
   margin-right: auto;
@@ -196,7 +196,6 @@ footer {
 footer p {
   font-size: 13px;
   line-height: 1rem;
-  max-width: 30 rem;
   margin:0.5rem auto;
   text-align:center;
 }
@@ -283,9 +282,6 @@ a:hover {
     paading-right: 2rem;
   }
 
-  footer p{
-    text-align: center;
-    }
   }
 
   blockquote {
@@ -330,14 +326,6 @@ a:hover {
 
 @media (max-width: 768px) {
   .home-sections {
-    grid-template-columns: 1fr}
-  .site-footer {
-    text-align: center;
+    grid-template-columns: 1fr
   }
-
-  .site-footer p {
-    padding: 20rem;
-    line-height: 1.4;
-  }
-}
 }
