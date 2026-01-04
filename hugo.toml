@@ -1,4 +1,4 @@
 baseURL = 'https://karsosp.netlify.app/'
 languageCode = 'en-us'
-title = 'karsosp'
+title = "Karso's Meanderings"
 disableKinds = ["taxonomy"]
