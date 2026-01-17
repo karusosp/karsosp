@@ -2,3 +2,9 @@ baseURL = "https://karso.xyz"
 languageCode = 'en-us'
 title = "Karso's Meanderings"
 disableKinds = ["taxonomy"]
+[params]
+  author = "Karso Suryo Putro"
+  description = """Karso's Meanderings blog aims to provide the reader with
+  reflective and honest writings on the author personal experience as well as
+  various topics such as science, philosophy, and technology""" 
+  
