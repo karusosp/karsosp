@@ -1,6 +1,58 @@
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Merriweather:wght@300;400;700&display=swap');
 
+/* ===== Dark mode ===== */
+html.dark section, html.dark body, html.dark main {
+  background-color: #000;
+  color: #eee;
+}
+
+html.dark nav {
+  background-color: #000;
+  border-bottom: 1px solid #fff;
+}
+
+html.dark h1, h2, h3, h4, h5 {
+  color: white;
+}
+
+html.dark header h1{
+  color: white;
+}
+
+html.dark a {
+  color: #aaa;
+}
+
+html.dark .home-box {
+  border: 1px white dashed;
+}
+
+html.dark .home-box a {
+  color: white;
+}
+
+html.dark blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  background: #222222;
+  border-left: 4px solid #222;
+  font-size: 0.95em;
+  line-height: 1.65;
+  color: #fff;
+}
+
+html.dark footer {
+  border-top: 1px solid #fff;
+}
+
+html.dark .post-list {
+}
+
+nav #theme-toggle {
+  color: inherit;
+  font-size: 20px;
+}
 /* --------------------------------------------------
    Base Layout (Mobile First)
 -------------------------------------------------- */
@@ -69,8 +121,8 @@ header h1 {
 
 nav {
   background-color: rgb(250 250 250 / 5%);
-  padding: 0.75rem;
-  font-size: 18px;
+  padding: 0.0rem;
+  font-size: 16px;
   text-align: center;
   border-bottom: 1px solid black;
 }
@@ -107,7 +159,6 @@ nav {
 
 .post-list {
   list-style: none;
-  border: 1px solid black;
   margin: 0.75rem 0;
   padding: 0.5rem 0;
 }
@@ -338,4 +389,17 @@ a:hover {
   .home-sections {
     grid-template-columns: 1fr
   }
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: inherit;
+}
+
+#theme-toggle:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }

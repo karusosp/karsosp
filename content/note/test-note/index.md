@@ -1,7 +1,7 @@
 ---
 title: "Test Note: LaTeX rendering"
 date: 2025-01-18
-draft: true
+draft: false
 ---
 # Test
 When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
