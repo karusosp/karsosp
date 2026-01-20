@@ -4,7 +4,16 @@ title = "Karso's Meanderings"
 disableKinds = ["taxonomy"]
 [params]
   author = "Karso Suryo Putro"
-  description = """Karso's Meanderings blog aims to provide the reader with
-  reflective and honest writings on the author personal experience as well as
-  various topics such as science, philosophy, and technology""" 
-  
+  description = """I'm a normal lad who have interest in science, philosophy,
+  and computer tech. I like writing about those as well as other interesting
+  things""" 
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      enable = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
