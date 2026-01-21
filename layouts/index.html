@@ -19,7 +19,7 @@
     <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
     <time>{{ .Date.Format "2 January 2006" }}</time>
     {{ with .Summary }}
-      <p>{{ . }}</p>
+      <p>{{ . | truncate 100 }}</p>
     {{ end }}
   </article>
   {{ end }}

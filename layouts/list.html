@@ -8,8 +8,12 @@
         {{ .Title }}
         </a>
       </h3>
-      <p><em>Date : {{ .PublishDate.Format "2 January, 2006" }} </em> </p>
-      <p><strong>Summary</strong> : {{ .Summary }}</p>
+      <div class = "post-time">
+        <time> 
+          {{ .PublishDate.Format "2 January, 2006" }} 
+        </time>
+      </div>
+      <p>{{ .Summary | truncate 200 }}</p>
     </li>
   {{ end }}
   </ul>

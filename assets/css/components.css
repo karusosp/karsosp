@@ -111,7 +111,20 @@ footer a {
 }
 
 .post-list h3{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
+}
+.post-list a {
+  color: var(--muted)
+}
+
+.post-list p {
+  padding-left: 1rem;
+}
+.post-time {
+  color: #44444E;
+  font-style: italic;
+  margin: auto;
+  text-align: left;
 }
 
