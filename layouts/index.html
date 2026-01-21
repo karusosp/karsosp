@@ -1,40 +1,30 @@
 {{ define "main" }}
 <section class="home-description">
-  <figure class="home-figure">
-    <img class="home-image" src="/picture/self.jpeg">
-  </figure>
+  <img class="home-image" src="/picture/self.jpeg">
   <p>
-    The purpose to create this site is both to scream at the void as well as to motivate myself to
-    write more. I'm interested in lot of things, but mainly it's either Science or
+    The purpose to create this site is both to scream at the void as well as to
+    have an excuse to write more. I'm interested in lot of things, but mainly it's either Science or
     Philosophy. Some of my serious writings thus will revolve around those topics,
-    though in unseriousness i take interest in perhaps too many things: open source tech,
+    though in unseriousness i do take interest in perhaps too many things: open source tech,
     chess, football, fountain pen, and other unproductive-yet-fun things.  
   </p>
 </section>
 
-<section class="home-sections">
-    <div class="home-box">
-    <h2><a href="~/note">Notes</a></h2>
-    <p>
-      Collection of notes that I create in my journey of learning.
-      I use some of them for teaching as well. (Coming soon)
-    </p>
-  </div>
-
-  <div class="home-box">
-    <h2><a href="/blog">Blogs</a></h2>
-    <p>
-      My mind is a mess and full of distraction. Writing blogs is my attempt to
-      make my life intentional and structured. 
-    </p>
-  </div>
-
-  <div class="home-box">
-    <h2><a href="/essay">Essays</a></h2>
-    <p>
-    These are more of a serious attempt to put my thought to a subject with the goal of understanding a problem or knowledge. 
-    </p>
-  </div>
+<section class="home-posts">
+  <h1>
+    Recent posts
+  </h1>
+  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+  {{ range first 3 ($posts.ByDate.Reverse) }}
+  <article>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <time>{{ .Date.Format "2 January 2006" }}</time>
+    {{ with .Summary }}
+      <p>{{ . }}</p>
+    {{ end }}
+  </article>
+  {{ end }}
+ 
 </section>
 {{ end }}
 

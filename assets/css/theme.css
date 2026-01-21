@@ -1,0 +1,35 @@
+/* =================================
+                Theme
+   ================================= */
+:root {
+  /* colors */
+  --bg: #fffff;
+  --fg: #222222;
+  --muted: #666666;
+  --border: #000000;
+
+  --bg-muted: #f5f5f5;
+  --bg-code: #f9f9f9;
+  --bg-footer: #FFFFFF;
+  --bg-header: #FFFFFF;
+
+  /* typography */
+  --font-body: "Merriweather", serif;
+  --font-heading:"Playfair Display" ,serif;
+
+  /* sizes */
+  --measure: 50rem;
+}
+
+html.dark {
+  --bg: #000000;
+  --fg: #eeeeee;
+  --muted: #aaaaaa;
+  --border: #ffffff;
+
+  --bg-muted: #222222;
+  --bg-code: #1a1a1a;
+  --bg-footer: #222222;
+  --bg-header: #222222;
+}
+

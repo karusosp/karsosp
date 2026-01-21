@@ -1,0 +1,134 @@
+/* ======================
+           Base
+   ====================== */
+/* Box Model */ 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+/* Base Margin and Font */
+body {
+  margin: 0;
+  padding: 1rem;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: var(--fg);
+  background-color: var(--bg);
+}
+
+/* reading width */
+main {
+  max-width: var(--measure);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 1rem 0 0.5rem;
+}
+
+h1 {font-size: 1.5rem;}
+h2 {font-size: 1.3rem;}
+h3 {font-size: 1.2rem;}
+h4 {font-size: 1.1rem;}
+h5,h6 {font-size: 1rem;}
+/* text */
+p {
+  margin: 0 0 1.2rem;
+}
+
+ul  text-wrap: pretty;,
+ol {
+  padding-left: 1.25rem;
+  margin: 0 0 1.2rem;
+}
+
+/* links */
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* rules */ 
+hr {
+  border: none;
+  border-top: 1px dashed var(--border);
+  margin: 2rem 0;
+}
+
+/* code */ 
+pre {
+  background: var(--bg-code);
+  padding: 0.75rem;
+  overflow-x: auto;
+}
+
+code {
+  background: var(--bg-code);
+}
+
+/* media */  
+article p {
+  min-width: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto; 
+  margin-right: auto;
+  box-shadow: 0px 5px 12px rgba(0,0,0,0.5);
+}
+
+/* blockquotes */
+blockquote {
+  margin: 0rem 0;
+  padding: 0rem 0rem;
+  background: var(--bg-muted);
+}
+
+blockquote p {
+  font-style: italic;
+  padding: 1rem;
+}
+
+/* tables */ 
+table {
+  border-collapse: collapse;
+  margin: 1.5rem auto;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+}
+
+/* typography scaling */ 
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    line-height: 1.65;
+  }
+}
+

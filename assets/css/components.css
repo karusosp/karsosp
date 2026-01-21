@@ -1,0 +1,73 @@
+/* =========
+   Components
+   ========= */
+
+/* navigation */ 
+.site-header {
+  max-width: var(--measure);
+  margin: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: var(--bg-header);
+}
+
+.navigation-bar {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-bar a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+
+}
+#theme-toggle {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  margin-left: auto;
+}
+
+/* home */ 
+.home-description {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphen: auto;
+  text-wrap: pretty;
+}
+.home-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 1.25rem 1rem 0;
+  float: left;
+  shape-outside: circle(50%);
+}
+
+/* footer */ 
+footer {
+  max-width: var(--measure);
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--bg-footer);
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0rem;
+  line-height: 1rem;
+}
+
+/* Post-List Attributes  */
+.post-list {
+  list-style: none;
+}
+
+.post-list h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+}

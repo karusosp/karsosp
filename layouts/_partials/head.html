@@ -3,9 +3,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="description" content="{{ .Site.Params.description }}">
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
-  <link rel="icon" href="/favicon/favicon.ico" type="icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  {{ $css := slice
+    (resources.Get "css/theme.css")
+    (resources.Get "css/base.css")
+    (resources.Get "css/components.css")
+    | resources.Concat "css/style.css"
+    | resources.Minify
+  }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   <link href="https://cdn.jsdelivr.net" rel="stylesheet" integrity="sha384-0RonC0dLRk3PzO8BwufXG1yYdWAw3Z5UUZrz/fQ4bVP5b+3aV5d+/bXyQ+J5y+s" crossorigin="anonymous">
   <script src="/js/theme.js" defer></script>
-  <title> {{ .Title }} </title> 
+  <link rel="icon" href="/favicon/favicon.ico" type="icon" />
+  
 </head>

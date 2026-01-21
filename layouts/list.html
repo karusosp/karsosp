@@ -1,5 +1,5 @@
 {{ define "main" }}
-<section>
+<article> 
   <ul> 
   {{ range .Pages.ByPublishDate.Reverse }}
     <li class = "post-list">
@@ -13,6 +13,6 @@
     </li>
   {{ end }}
   </ul>
-<section>
+</article>
 {{ end }}
 
