@@ -1,5 +1,5 @@
 ---
-title: "On Mount Kembang Hiking Experience"
+title: "Mount Kembang hiking experience"
 summary: "I noted several things that occured during this hiking: the beauty of
 dense mountainous forest, mistakes made along the journey, and a coarse
 rumination on the hiking as a metaphor for life."

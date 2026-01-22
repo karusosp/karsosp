@@ -1,7 +1,7 @@
 +++
 date = '2025-12-28T20:23:24+07:00'
 draft = false
-title = 'My Website is Somewhat Ready To Use'
+title = 'My website is somewhat ready to use'
 summary = "Just a rambling on my this site's project directory"
 +++
 

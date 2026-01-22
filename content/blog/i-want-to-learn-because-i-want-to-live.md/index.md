@@ -3,6 +3,7 @@ title: "I want to learn because i want to live"
 author: "Karso Suryo Putro"
 date: 2026-01-22
 summary: "An attempt to reflect to my own desire for knowledge."
+draft: false
 ---
 People learn for many kind of reason. Most of them, I think, learn so that they can live a more comfortable life; that is they learn to gain a specific knowledge that can be used through various means to generate money. However, for some, including me, learning is so much more than a mean for survival; for us, learning is a priority in life. Here in this writing I want to reflect this feeling of mine toward learning.
 
@@ -23,5 +24,5 @@ Back onto the question then, why do I want knowledge so bad? if the answer is so
 Maybe in actuality, the conclusion in my high school trauma experience earlier is backward. It is not that I want to live because I want to learn; but rather that I want to learn because I want to live. I say yes to living not for anything else, but simply for its own sake. Maybe it’s survival instinct disguised as intuition, but in any case I safeguarded it using learning. 
 And since to live means to observe, to experience, and to feel; by learning then, i can observe, experience, and feel ever more deeply toward nature or anything else there is. Thus, by learning i can live more.
 
-[^1]: This is very personal and i’m deeply hurt by it. Maybe, if i’m feeling comfortable sharing it, i might write about it.
+[^1]: This is very personal and i’m deeply hurt by it. Maybe, if i’m feeling comfortable sharing it, i might write about it in the future.
 
