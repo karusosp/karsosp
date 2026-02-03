@@ -1,0 +1,37 @@
+---
+date: '2026-02-03T08:25:33+07:00'
+draft: false
+title: 'On myself and happiness'
+summary: "A brief account of my reflection about myself and what I should pursue"
+---
+
+For years, I’ve been confused. I’ve been pondering on the same question, over and over, namely about my identity in the form of “Who am I? What am I? What am I pursuing? What should I do? Etc”, and all with no satisfying answer. That’s because though my mind was active, the activity was quickly distracted by my lack of commitment at one time, but at other times by external factors. Here, I want to give an account of what I know about myself and the things that I should pursue. 
+# On Myself
+I am a human. That’s as obvious as it can get, but obviousness does not negate depth, for I can always think and ponder about what does it mean to be human for as long as I can breathe, and I may still not reach the full answer. However, though clouded in uncertainty, I feel like I must commit myself on some things that I think are obviously true, in the purpose of acquiring a clear-enough picture of myself so that I can reason about the things that I should be aiming at and about the way to live for that aim. 
+
+What I can extrapolate on the fact that I am a human is obvious, namely that I am a kind of animal and being an animal, I will always have biological needs and desires, and that I will cease to exist due to biological limitation, and so on. However, human are not _just_ an animal. Human have their special characters and their unique potentials, and that is, as you perhaps have guessed, the ability to think very deeply, to contemplate about the state of thing, and to be aware of its own consciousness. In short then, as has been previously stated by Aristotle, human are _rational animal_. It, however, must be emphasized that what I mean by “human are rational animal” is not that human are _always_ rational, or that human are _always_ acting in accordance to reason, but rather that human are a kind of animal that have potential to do just that. And this point relate to the other point in regard of what I, as a human, should do. 
+## From _Ergon_ to _Eudaimonia_
+What we have established, with simple reasoning, that human are rational animal is the foundational identity of myself and one that I will be using here. Thus, now, we get a picture of human which appear to us as having two sides: the rational part and the animal or bodily part. I do not, however, think that these sides are two separate entities existing in different realms, but rather they are two entities where one emerges from the other, namely the rational part emerges from the animal/corporeal part, specifically the brain where our mind resides. Therefore, we have our body serving as the foundation for our mind to operate. What does this picture tell us is that we have our _ergon_ [^1], our distinguishing character, or our characteristic activity, which is our ability to reason and think deeply; and that this _ergon_ depends on the bodily part to function well. 
+
+What does this tell me about what I should aim for then? First, I assume that to live in accordance to one’s nature is better than to live outside of one’s nature. For, if one were to live not in accordance to one’s nature, he/she is living in the state of confusion. Such confusion in identity weaken agency and if such condition would continue, he/she may feel powerless and hopeless. We can imagine that such life is far from happy. An Illustration, albeit in a form of funny cartoon came from the feeling of frustration of Mr. Fox in Wes Anderson’s film of _Fantastic Mr. Fox_, which gives us a glimpse of the misery due to living a life outside of one’s nature [^2]: 
+
+> “Who Am I? Why not a horse? or a beetle, or a bald eagle?
+> …Who Am I? And how can a fox be happy without a chicken in its teeth” — Mr. Fox 
+
+Such frustation I think is both understandable and applicable to human as well. How can a human be happy without a feeling that he/she is indeed human and engage in human-like activity? Thus we can conclude that in order for a human to be happy, he/she need to live _in being as human as he/she can possibly be_. The question is how? how can one live in being maximally human?  Arsitotle has provided an answer to such question, namely through the use of what is commonly called ‘function argument’ or _ergon_ argument:
+
+> “The good of human being must have something to do with being human; and what sets humanity off from other species, giving us the potential to live a better life, is our capacity to guide ourselves by using reason” — [Aristotle’s Ethics on Standford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/aristotle-ethics/)
+
+So thus far, I, as a human, can conclude that I have an _ergon_ in the form of my aility to use reason; and in order to be human well, I need to use my _ergon_ as best as possible. However, since reason depend on the brain and the body, to live well using reason I must also need to make sure that my bodily part function sufficiently well. For, though one may be ill and still capable of using reason well, it is still suboptimal on average because it may distract the person to use reason well. It would be significantly better for one to have a good functioning body to support his/her rational activity. Thus, it follow that I must eat and sleep well. I must possess a good health in general to allow myself to not be distracted too much in performing rational activity. And if I persist in doing my rational activity for as long as I can possibly be, as good as I possibly could, I will live well and flourish in accordance to my nature as a human, or in the word of Arisotle, I shall reach _Eudaimonia_ [^3]. That’s what I should aim for.
+
+# What does it means for me practically? 
+It must first need to be clarified that _eudaimonia_ doesn’t mean a state of being or condition, instead it is an activity of living through the constant practice of using reason and act according to reason. What does it means is that I, _first_, must seek for reason or justification in important aspects of my belief system. This entails my need for seeking knowledge. _Second_, I must also need constant reflections to evaluate whether I live in accordance to reason or whether I have strayed from the path that I want to take on. Those two demands need time and good functioning of my body. Thus, instrumentally I must provide my body a good health and manage my bodily desires so that it doesn’t interfere with my mind; and I also need a lot of uninterrupted time for me to think, ponder, and contemplate. This is harder than it sound, but this is a commitment that I want to make on my life, one that I want to prioritize above all else. 
+
+[^1]: The definition of _ergon_ that I use here follow from the Joe' Sachs’s translation of [Nichomachean Ethics](https://hackettpublishing.com/nicomachean-ethics-sachs)
+
+[^2]: More on the discussion about the interpretation of _Fantastic Mr. Fox_ in relation to how consumerism and Aristotelian ideal can be read on [Matt Duncan’s paper](https://philpapers.org/rec/DUNNCA) titled _Consumerism, Aristotle, and Fantastic Mr. Fox_. 
+
+[^3]: Eudaimonia is sometime translated as happiness. But, more accurate
+    translation would be living well or well-being and can be understood as a
+life full of virtous activity or more broadly the fulfillment of human
+capacities. You can read more on [SEP's account on happiness](https://plato.stanford.edu/entries/happiness/) 
