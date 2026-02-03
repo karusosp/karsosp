@@ -5,7 +5,7 @@ title: 'On myself and happiness'
 summary: "A brief account of my reflection about myself and what I should pursue"
 ---
 
-For years, I’ve been confused. I’ve been pondering on the same question, over and over, namely about my identity in the form of “Who am I? What am I? What am I pursuing? What should I do? Etc”, and all with no satisfying answer. That’s because though my mind was active, the activity was quickly distracted by my lack of commitment at one time, but at other times by external factors. Here, I want to give an account of what I know about myself and the things that I should pursue. 
+For years, I’ve been confused. I’ve been pondering on the same question, over and over, namely about my identity in the form of “Who am I? What am I? What am I pursuing? What should I do? Etc”, and all with no satisfying answer. That’s because though my mind was active, the activity was quickly distracted by my lack of commitment at one time, but at other times by external factors. Here, I want to continue on such reflection and write an account of what I'm sure about myself and the things that I should pursue. 
 # On Myself
 I am a human. That’s as obvious as it can get, but obviousness does not negate depth, for I can always think and ponder about what does it mean to be human for as long as I can breathe, and I may still not reach the full answer. However, though clouded in uncertainty, I feel like I must commit myself on some things that I think are obviously true, in the purpose of acquiring a clear-enough picture of myself so that I can reason about the things that I should be aiming at and about the way to live for that aim. 
 
@@ -27,7 +27,7 @@ So thus far, I, as a human, can conclude that I have an _ergon_ in the form of m
 # What does it means for me practically? 
 It must first need to be clarified that _eudaimonia_ doesn’t mean a state of being or condition, instead it is an activity of living through the constant practice of using reason and act according to reason. What does it means is that I, _first_, must seek for reason or justification in important aspects of my belief system. This entails my need for seeking knowledge. _Second_, I must also need constant reflections to evaluate whether I live in accordance to reason or whether I have strayed from the path that I want to take on. Those two demands need time and good functioning of my body. Thus, instrumentally I must provide my body a good health and manage my bodily desires so that it doesn’t interfere with my mind; and I also need a lot of uninterrupted time for me to think, ponder, and contemplate. This is harder than it sound, but this is a commitment that I want to make on my life, one that I want to prioritize above all else. 
 
-[^1]: The definition of _ergon_ that I use here follow from the Joe' Sachs’s translation of [Nichomachean Ethics](https://hackettpublishing.com/nicomachean-ethics-sachs)
+[^1]: The definition of _ergon_ that I use here follow from the Joe' Sachs’s translation of [Nicomachean Ethics](https://hackettpublishing.com/nicomachean-ethics-sachs)
 
 [^2]: More on the discussion about the interpretation of _Fantastic Mr. Fox_ in relation to how consumerism and Aristotelian ideal can be read on [Matt Duncan’s paper](https://philpapers.org/rec/DUNNCA) titled _Consumerism, Aristotle, and Fantastic Mr. Fox_. 
 
