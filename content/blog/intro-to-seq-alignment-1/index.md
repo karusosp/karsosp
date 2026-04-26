@@ -10,8 +10,10 @@ draft: false
 
 One of the most important thing to do in biology is to compare biological information, which mostly exist in the form of sequences. This is called sequence alignment and is of great importance as the comparison between sequences can provide important biological interpretation, such as finding evolutionary distance, predicting sequence's structure and function based on annotated sequence database, or detecting anomalies in a biological system. It is not an exageration to say that sequence alignment is the backbone of bioinformatics, the study of complex biological data. Here, I would like to explore the common techniques of sequence alignment by implementing the algorithms in R from scratch with the hope of understanding these fundamental techniques even more.
 
-In this blog, firstly I would like to describe the need of efficient algorithm by demonstrating that the naive approach to align two sequences, that is by iterating over all possible alignment and find the best one by some scoring system, is not at all feasible in the real world as the operating cost of such method is exceedingly high. And after showing that naive approach is not feasible, I will discuss about a more efficient approach in the form of **dynamic programming**, of which the difference between *local alignment* and *global alignment* is introduced.
+In this blog, firstly I would like to describe the need of efficient algorithm by demonstrating that the naive approach to align two sequences, that is by iterating over all possible alignment and find the best one by some scoring system, is not at all feasible in the real world as the operating cost of such method is exceedingly high. And after showing that naive approach is not feasible, I will discuss about a more efficient approach in the form of **dynamic programming**, of which the implementation of Needleman-Wunsch Algorithm is discussed.
 
+All the codes for reproducing the results in this article can be accessed
+https://github.com/karusosp/sequence-alignment-basic
 # Introduction: The Basic of Sequence Alignment
 
 Suppose we have two sequences, say both have the length of 6; the first sequence is "ACGTAG" and the second sequnce is "ACATAC". What is the most obvious way to compare those two sequences? One may think that the way to do it is by stacking both sequences and try to give some form of evaluation to it, that is by quantifying how similar are those sequences.
@@ -20,19 +22,19 @@ Suppose we have two sequences, say both have the length of 6; the first sequence
     || ||
     ACATAC
 
-In this case we have four similar matched words (or nucleotides) and two mismatchs. One of the most obvious way to evaluate the alignment is by providing scoring system. For example, for each match a score of $+1$ will be added whereas mismatch will give a score of $-1$. In biological sequence, the mismatch usually could be interpreted as mutation event in the form of *substitution* where one nucleotide is substituted with another kind of nucleotide. Therefore the above alignment is having a score $4-2=2$. This is straightforward enough. But there's still problem. Suppose if we use the same scoring system, what if the sequences are best aligned in different way? For instance we have two sequences: "ACGTAG" and "TACGTC". If we do the same as the above, we get the following alignment where nothing is matched at all.
+In this case we have four similar matched words (or nucleotides) and two mismatchs. One of the most obvious way to evaluate the alignment is by providing scoring system. For example, for each match a score of +1 will be added whereas mismatch will give a score of -1. In biological sequence, the mismatch usually could be interpreted as mutation event in the form of *substitution* where one nucleotide is substituted with another kind of nucleotide. Therefore the above alignment is having a score \(4-2=2\). This is straightforward enough. But there's still problem. Suppose if we use the same scoring system, what if the sequences are best aligned in different way? For instance we have two sequences: "ACGTAG" and "TACGTC". If we do the same as the above, we get the following alignment where nothing is matched at all.
 
     ACGTAG
           
     TACGTC
 
-In this case, the alignment give a score of $-12$. But if we take a look at both sequences, a different alignment where we shift one of the sequence to the left or right will give us better alignment score:
+In this case, the alignment give a score of -12. But if we take a look at both sequences, a different alignment where we shift one of the sequence to the left or right will give us better alignment score:
 
     -ACGTAG
      ||||
     TACGTC-
 
-Here we have four matchs and four mismatchs, that give us a score of $4 + -(4)$ = 0, which is higher than the previous one. However, in doing so we introduce something new: a *gap* which is denoted by the dashed symbol. And this actually made a biological sense because sequences organism are subject to *insertion* and *deletion* and gap is the representation of it. Therefore, our previous scoring system can be updated to provide gap penalty which in our case is given arbitrarily, where each gap would give score of $-1$. Once we introduce gap to the alignment, there will be complexity because we can add gap to every possible position on the both sequences.
+Here we have four matchs and four mismatchs, that give us a score of \(4 + (-4) = 0 \), which is higher than the previous one. However, in doing so we introduce something new: a *gap* which is denoted by the dashed symbol. And this actually made a biological sense because sequences organism are subject to *insertion* and *deletion* and gap is the representation of it. Therefore, our previous scoring system can be updated to provide gap penalty which in our case is given arbitrarily, where each gap would give score of -1. Once we introduce gap to the alignment, there will be complexity because we can add gap to every possible position on the both sequences.
 
 For example if we try to align two sequences, both with the length of just 2: "AT" and "GA"; we have these possible alignment:
 
@@ -104,9 +106,9 @@ delannoy(100, 100)
 
     [1] 2.053717e+75
 
-You see that just with two 100-character long sequences, we almost reach **the eddington number** (approximately $1.57 \times 10^{79}$), a number that represent **the total amount of all atom in the universe!**. We could also illustrate it by creating a graph where the number of possibility increase on logarithmic scale, where as you can see in the below graph, 20-long sequence already contain more than $10^{10}$ possible alignments, which is already computationally hopeless.
+You see that just with two 100-character long sequences, we almost reach **the eddington number** (approximately \(1.57 \times 10^{79}\)), a number that represent **the total amount of all atom in the universe!**. We could also illustrate it by creating a graph where the number of possibility increase on logarithmic scale, where as you can see in the below graph, 20-long sequence already contain more than $10^{10}$ possible alignments, which is already computationally hopeless.
 
-![The Infeseability of Naive Approach]("all_possible_alignment.png")
+![](all_possible_alignment.png)
 
 # Smarter Approach: Introduction to Dynamic Programming
 
@@ -117,13 +119,13 @@ In order to understand, let's firslty clarify our main problem in alignment befo
 The key insight is instead of applying the scoring for each alignment, **the score can be immediately determined for each cell within the matrix based on a recurring simple question**: *what is the maximum score for this cell given three possible moves: diagonal (match = +1/mismatch = -1), downward and rightward (gap = -1)?*. And that question is being repetitively asked for every cell within the matrix. And this is much simpler problem than determining all the possible path from the start to end position. If that is a bit too abstract, let's try to imagine it.
 
 ![Step-by-Step Illustration of Filling The Matrix With
-Scores]("scoring_mat_step.png")
+Scores](scoring_mat_step.png)
 
 And as you can see in the image above, the recurring problem are highlighted with red boxes. And after all the cells within the matrix are filled with the best score, we can find the best alignment by tracing back the path it require to get to the bottom-right cell and this is a trivial matter because we can directly store the move that correspond with the best score during the matrix filling process.
 
 Why this works? The justification for this approach is the fact that for an optimal sequence alignment, the subsequence alignment also needed to be optimal as well. Therefore we can built from the ground up, from the smallest possible subsequence alignment and reuse the solution to gradually built up the full sequence alignment. And this made sense because if the subsequence alignment is unoptimal, then the whole sequence alignment is not the most optimal.
 
-By using this dynamic programming technique, we reduce the scale problem from having to calculate the whole possibility which increase exponentially (approximately $2^{m \times n}$), to a process where the scale only increase polynomially (approximately $m \times n$).
+By using this dynamic programming technique, we reduce the scale problem from having to calculate the whole possibility which increase exponentially (approximately \(2^{m \times n}\), to a process where the scale only increase polynomially (approximately \(m \times n\).
 
 ## Needleman-Wuncsh Algorithm (Global Alignment)
 
@@ -131,7 +133,7 @@ One of the gold standard in sequence alignment that uses dynamic programming is 
 
 1.  GENERATE the 2D matrix representation of the sequence alignment
 2.  FILL each interior cell with the maximum score from three possible moves: diagonal (match/mismatch), downward (gap), rightward (gap) and simultaneously record which move produced the best score in a pointer matrix.
-3.  TRACEBACK \[nrow, ncol\] to \[1, 1\] by following the pointer matrix, and directly build the two aligned sequences.
+3.  TRACEBACK from (nrow, ncol) to (1, 1) by following the pointer matrix, and directly build the two aligned sequences.
 
 For demosntration purpose, I have implemented the algorithm in R which you can directly access within this github repo: [sequence-alignment-basic](https://github.com/karusosp/sequence-alignment-basic). And below is the result of aligning two 50-character long sequences using the script.
 
