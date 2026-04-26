@@ -106,7 +106,7 @@ delannoy(100, 100)
 
 You see that just with two 100-character long sequences, we almost reach **the eddington number** (approximately $1.57 \times 10^{79}$), a number that represent **the total amount of all atom in the universe!**. We could also illustrate it by creating a graph where the number of possibility increase on logarithmic scale, where as you can see in the below graph, 20-long sequence already contain more than $10^{10}$ possible alignments, which is already computationally hopeless.
 
-<img src="./figure/scoring_mat_step.png" style="width:60.0%" data-fig-align="center" />
+![The Infeseability of Naive Approach]("all_possible_alignment.png")
 
 # Smarter Approach: Introduction to Dynamic Programming
 
@@ -116,7 +116,8 @@ In order to understand, let's firslty clarify our main problem in alignment befo
 
 The key insight is instead of applying the scoring for each alignment, **the score can be immediately determined for each cell within the matrix based on a recurring simple question**: *what is the maximum score for this cell given three possible moves: diagonal (match = +1/mismatch = -1), downward and rightward (gap = -1)?*. And that question is being repetitively asked for every cell within the matrix. And this is much simpler problem than determining all the possible path from the start to end position. If that is a bit too abstract, let's try to imagine it.
 
-::: {#fig-complex-label} <img src="figure/scoring_mat_step.png" style="width:65.0%" /> Step-by-step illustration for filling the alignment matrix with scores. The image is taken from the awesome [Kenko Wong's blog](https://www.kenkoonwong.com/blog/dynamic-programming/) :::
+![Step-by-Step Illustration of Filling The Matrix With
+Scores]("scoring_mat_step.png")
 
 And as you can see in the image above, the recurring problem are highlighted with red boxes. And after all the cells within the matrix are filled with the best score, we can find the best alignment by tracing back the path it require to get to the bottom-right cell and this is a trivial matter because we can directly store the move that correspond with the best score during the matrix filling process.
 
