@@ -1,11 +1,10 @@
 ---
-title: Introduction to Sequence Alignment
-author: Karso Suryo Putro
-date: today
-format:
-  hugo:
-    code-fold: true
-  pdf: default
+title: "Introduction to Sequence Alignment, Part 1"
+author: "Karso Suryo Putro"
+date: 2026-04-26
+summary: "Here I explain the basic of sequence of alignment and demonstrate it
+by implementing the Needleman-Wunsch algorithm in R"
+draft: false
 ---
 
 
