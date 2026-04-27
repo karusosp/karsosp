@@ -5,7 +5,7 @@ date: 2026-04-26
 summary: Here I introduce the basic of sequence of alignment and demonstrate it by implementing the Needleman-Wunsch algorithm from scratch in R
 description: A brief exploration into the absolute basic of sequence alignment and how the algorithm really work
 images: 
-- post-cover.png
+- intro-to-seq-alignment-1/post-cover.png
 draft: false
 ---
 
