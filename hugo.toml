@@ -4,10 +4,8 @@ title = "Karso's Meanderings"
 disableKinds = ["taxonomy"]
 [params]
   author = "Karso Suryo Putro"
-  description = """I'm a normal lad who have interest in science, philosophy,
-  and computer tech. I like writing about those as well as other interesting
-  things""" 
-
+  description = """A personal site where I write about the things that excite me""" 
+  images = ["images/og-default.jpeg"]
 [markup]
   [markup.goldmark]
     [markup.goldmark.extensions]

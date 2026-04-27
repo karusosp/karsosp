@@ -9,7 +9,6 @@ draft: false
 
 
 One of the most important thing to do in biology is to compare biological information, which mostly exist in the form of sequences. This is called sequence alignment and is of great importance as the comparison between sequences can provide important biological interpretation, such as finding evolutionary distance, predicting sequence's structure and function based on annotated sequence database, or detecting anomalies in a biological system. It is not an exageration to say that sequence alignment is the backbone of bioinformatics, the study of complex biological data. Here, I would like to explore the common techniques of sequence alignment by implementing the algorithms in R from scratch with the hope of understanding these fundamental techniques even more.
-
 In this blog, firstly I would like to describe the need of efficient algorithm by demonstrating that the naive approach to align two sequences, that is by iterating over all possible alignment and find the best one by some scoring system, is not at all feasible in the real world as the operating cost of such method is exceedingly high. And after showing that naive approach is not feasible, I will discuss about a more efficient approach in the form of **dynamic programming**, of which the implementation of Needleman-Wunsch Algorithm is discussed.
 
 All the codes for reproducing the results in this article can be accessed
@@ -34,7 +33,7 @@ In this case, the alignment give a score of -12. But if we take a look at both s
      ||||
     TACGTC-
 
-Here we have four matchs and four mismatchs, that give us a score of \(4 + (-4) = 0 \), which is higher than the previous one. However, in doing so we introduce something new: a *gap* which is denoted by the dashed symbol. And this actually made a biological sense because sequences organism are subject to *insertion* and *deletion* and gap is the representation of it. Therefore, our previous scoring system can be updated to provide gap penalty which in our case is given arbitrarily, where each gap would give score of -1. Once we introduce gap to the alignment, there will be complexity because we can add gap to every possible position on the both sequences.
+Here we have four matchs and four mismatchs, that give us a score of \(4 + (-4) = 0\), which is higher than the previous one. However, in doing so we introduce something new: a *gap* which is denoted by the dashed symbol. And this actually made a biological sense because sequences organism are subject to *insertion* and *deletion* and gap is the representation of it. Therefore, our previous scoring system can be updated to provide gap penalty which in our case is given arbitrarily, where each gap would give score of -1. Once we introduce gap to the alignment, there will be complexity because we can add gap to every possible position on the both sequences.
 
 For example if we try to align two sequences, both with the length of just 2: "AT" and "GA"; we have these possible alignment:
 
@@ -46,7 +45,7 @@ For example if we try to align two sequences, both with the length of just 2: "A
                GA-- | G-A- | G--A | -GA- | -G-A | --GA |
     score    :  -4  |  -4  |  -4  |  -4  |  -4  |  -4  |
 
-For each alignment, we use the previous scoring system and find the best alignment. In this case the best alignment is the one with $-1$ score. Thus, using a scoring system that capture match, mistmatch, and gap information, we could implement a form of algorithm in a computer machine. This is called *naive approach* to the alignment problem because we try to naively brute-force every possible alignment and find the best one
+For each alignment, we use the previous scoring system and find the best alignment. In this case the best alignment is the one with \(-1\) score. Thus, using a scoring system that capture match, mistmatch, and gap information, we could implement a form of algorithm in a computer machine. This is called *naive approach* to the alignment problem because we try to naively brute-force every possible alignment and find the best one
 
 ## Implementing Naive Approach Algorithm in R
 
@@ -82,13 +81,13 @@ naive_alignment(seq1, seq2,
     -ATCAG 
     GATCA- 
 
-As you can see from the result, the function iterate over all possible alignments and the total possibility is $1683$ when the sequence is just 5 characters length. What if the length were higher then? Well, I would not recommend you try to run my script beyond 6 character length. The operation cost is too high and you can imagine how impractical if it is used in the real world scenario where most biological sequences have the length of more than one hundred. In fact, I would demonstrate the amount of all possible alignment for two 100-character long sequences. The formula for doing so is given by Delannoy Number:
+As you can see from the result, the function iterate over all possible alignments and the total possibility is \(1683\) when the sequence is just 5 characters length. What if the length were higher then? Well, I would not recommend you try to run my script beyond 6 character length. The operation cost is too high and you can imagine how impractical if it is used in the real world scenario where most biological sequences have the length of more than one hundred. In fact, I would demonstrate the amount of all possible alignment for two 100-character long sequences. The formula for doing so is given by Delannoy Number:
 
 $$
 D(m, n) = \sum_{k=0}^{\min(m,n)} {m \choose k} {n \choose k} 2^k
 $$
 
-Where $m$ and $n$ is the amount of first and second sequence, whereas $k$ denote the amount of non-gap in each alignment (for further understanding, read [wikipedia page for Delannoy Number](https://en.wikipedia.org/wiki/Delannoy_number)). And if we implement that formula in an R code, we get the following:
+Where \(m\) and \(n\) is the amount of first and second sequence, whereas \(k\) denote the amount of non-gap in each alignment (for further understanding, read [wikipedia page for Delannoy Number](https://en.wikipedia.org/wiki/Delannoy_number)). And if we implement that formula in an R code, we get the following:
 
 <details class="code-fold">
 <summary>Code</summary>
@@ -106,7 +105,7 @@ delannoy(100, 100)
 
     [1] 2.053717e+75
 
-You see that just with two 100-character long sequences, we almost reach **the eddington number** (approximately \(1.57 \times 10^{79}\)), a number that represent **the total amount of all atom in the universe!**. We could also illustrate it by creating a graph where the number of possibility increase on logarithmic scale, where as you can see in the below graph, 20-long sequence already contain more than $10^{10}$ possible alignments, which is already computationally hopeless.
+You see that just with two 100-character long sequences, we almost reach **the eddington number** (approximately \(1.57 \times 10^{79}\)), a number that represent **the total amount of all atom in the universe!**. We could also illustrate it by creating a graph where the number of possibility increase on logarithmic scale, where as you can see in the below graph, 20-long sequence already contain more than \(10^{10}\) possible alignments, which is already computationally hopeless.
 
 ![](all_possible_alignment.png)
 
@@ -125,7 +124,7 @@ And as you can see in the image above, the recurring problem are highlighted wit
 
 Why this works? The justification for this approach is the fact that for an optimal sequence alignment, the subsequence alignment also needed to be optimal as well. Therefore we can built from the ground up, from the smallest possible subsequence alignment and reuse the solution to gradually built up the full sequence alignment. And this made sense because if the subsequence alignment is unoptimal, then the whole sequence alignment is not the most optimal.
 
-By using this dynamic programming technique, we reduce the scale problem from having to calculate the whole possibility which increase exponentially (approximately \(2^{m \times n}\), to a process where the scale only increase polynomially (approximately \(m \times n\).
+By using this dynamic programming technique, we reduce the scale problem from having to calculate the whole possibility which increase exponentially (approximately \(2^{m + n}\), to a process where the scale only increase polynomially (approximately \(m \times n\).
 
 ## Needleman-Wuncsh Algorithm (Global Alignment)
 
