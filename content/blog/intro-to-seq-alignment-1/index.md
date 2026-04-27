@@ -7,7 +7,7 @@ by implementing the Needleman-Wunsch algorithm from scratch in R"
 description: "A brief exploration into the absolute basic of sequence alignment
 and how the algorithm really work"
 images: 
-- og-alignment.png
+- "post-cover.png"
 draft: false
 ---
 
