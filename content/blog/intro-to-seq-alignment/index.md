@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Sequence Alignment, Part 1"
+title: "Introduction to Sequence Alignment"
 author: Karso Suryo Putro
 date: 2026-04-26
 summary: Here I introduce the basic of sequence of alignment and demonstrate it by implementing the Needleman-Wunsch algorithm from scratch in R
@@ -159,11 +159,63 @@ cat(" Seq1  :", result$align1, "(Seq Length ", nchar(seq1), ")", "\n",
 
 As you can see, the algorithm works wonder, even despite my bad code implementation. It can run for over 500bp sequence without problems. In fact, with much better code implementation it can handle up to thousands sequence. The fact that it is working very fast and with reliable result made this technique a gold standard in sequence alignment. However, it must be noted that this algorithm can only be applied as pairwise-alignment (two sequences only) and global-alignment (it align the whole sequence). Different cases of alignment, for instance multiple sequence alignment or local alignment between unequal-sized sequences, need different algorithms.
 
+# Global vs Local Alignment 
+We’ve discussed about the need of optimal method to find the best alignment given two sequence with roughly similar size.
+However, there are one thing that is not yet covered. 
+The Needleman-Wunsch algorithm that we’ve talked about earlier is aligning two sequences end-to-end, that is it align from the first nucleotide to the last one.
+Such algorithm is called **global alignment** and using that algorithm is very much appropriate for the case where we have two sequences with roughly similar length. 
+An example might be when you have two sequences that encode similar gene but came from different organism, and you want to compare those two sequence and find how similar are those sequences to each other. 
+Though such a case is important, there is also a case when you have sequence(s) and you want to know what the heck is those sequences are. 
+In this case, using Needleman-Wunsch algorithm is not appropriate In the case when we want to align two sequences with unequal length, what we
+should do is use **local alignment**. 
+
+## Smith-Waterman Algorithm
+Smith-Waterman Algorithm (SWA) actually has a lot of similarities with the Needleman-Wunsch because SWA was derived from it. Between the two, the main difference is the SWA set all the cell with negative score to zero and the traceback procedure start at the highest scoring matrix cell and finish when the traceback encounter zero-valued cell. It is this modification that allow for the algorithm to search through the database a subsequence that has the highest similarity score. The algorithm, like the Needleman-Wunschman is also guaranteed to find the most optimal alignment between two sequences.
+
+The SWA procedure can be summarized into these steps: 
+1. CREATE THE MATRIX as a representation of each sequence being aligned
+2. SCORE THE MATRIX’S CELLS in similar fashion to what NWA does
+3. FILL THE ZEROS for all cells that have negative score
+4. TRACEBACK procedure start by finding cell with the highest score and walk the optimal path until it encounter zero-valued cell
+5. RETURN THE SEQUENCE AND SCORE based on the optimal path 
+
+I've also implemented the algorithm in R and using the script that I've written
+we can try to align two sequences with unequal sizes. 
+
+
+<details class="code-fold">
+<summary>Code</summary>
+
+``` r
+source("scripts/smith-waterman.R")
+seq1 <- "ACACAGACAGACATGACAGACATAGAGACAGACAGAGACAGAGGGCCAGAGTTTT"
+seq2 <- "AGGTTTAC"
+result <- smith_waterman(seq1, seq2)
+cat(" Seq1  :", result$align1, "(Seq Length ", nchar(seq1), ")", "\n",
+    "Seq2  :", result$align2, "(Seq Length ", nchar(seq2), ")", "\n",
+    "Score :", result$score )
+```
+</details>
+
+     Seq1  : ACACAGACAGACATGACAGACATAGAGACAGACAGAGACAGAGGGCCAGAGTTTT    (Seq Length 45) 
+     Seq2  :                                                 AGGTTTAC  (Seq Length  10) 
+     Score : 0
+
+As you can see from the result above, the local alignment of SWA algorithm only
+align to a specific region that provide highest similarity score. As such, it is
+appropriate to apply this algorithm for database search. 
 # Conclusion
+In this article, I've explained what sequence alignment is, why it is important, and demonstrated the need of efficient solution in the form of dynamic programming. 
+This is the absolute basic of sequence alignment or sequence analysis in general and there are lot area to explore.
+However, the understanding of basic mechanism of the algorithm of sequence is
+very important for learning bioiformatics, especially for non-technical biologists that are the user of such kind of tools. 
+The user of scientific tools must not only use the tool appropriately according to the
+manual, but also need to understand the underlying mechanism so as not to
+confuse themselves. It is my hope that this article will provide some kind of
+enlightnment for the reader. If you find something confusing to my explanation
+or the code I implement, feel free to contact me.
 
-In this article, I've explained what sequence alignment is, why it is important, and demonstrated the need of efficient solution in the form of dynamic programming. This is the absolute basic of sequence alignment and there are lot area to explore. In the future article, part two series of this introduction to sequence alignment, I will explore:
+In the future article, I will try to discuss more about what tools that are
+available for researcher in the context of sequence alignment and how to use it
+to generate biological insight. 
 
-1.  Local Alignment: Smith-Waterman Algorithm
-2.  Introduction to Bioconductor packages in R
-3.  The Various Way To Extract Insight from Aligning Sequences
-4.  and more
