@@ -5,6 +5,7 @@
   /* colors */
   --bg: #fffff;
   --fg: #222222;
+  --fg-muted: #666;
   --link-font: #3e1c00;
   --muted: #111111;
   --border: #000000;
@@ -16,7 +17,7 @@
 
   /* typography */
   --font-body: "Merriweather", serif;
-  --font-heading:"Playfair Display" ,serif;
+  --font-heading: "Playfair Display", serif;
 
   /* sizes */
   --measure: 50rem;
@@ -25,6 +26,7 @@
 html.dark {
   --bg: #000000;
   --fg: #eeeeee;
+  --fg-muted: #aaa;
   --link-font: brown;
   --muted: #aaaaaa;
   --border: #ffffff;
@@ -34,4 +36,3 @@ html.dark {
   --bg-footer: #222222;
   --bg-header: #222222;
 }
-

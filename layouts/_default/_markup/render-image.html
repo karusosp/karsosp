@@ -1,0 +1,6 @@
+<figure>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}">
+  {{- if .Text }}
+  <figcaption>{{ .Text }}</figcaption>
+  {{- end }}
+</figure>
