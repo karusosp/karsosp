@@ -4,10 +4,14 @@
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 
-{{ with .Params.images }}
-  <meta property="og:image" content="{{ index . 0 | absURL }}" />
-{{ else }}
-  {{ with .Site.Params.images }}
-    <meta property="og:image" content="{{ index . 0 | absURL }}" />
-  {{ end }}
-{{ end }}
+<!-- Open Graph Image Logic -->
+{{- $ogImage := "" -}}
+{{- if .Params.images -}}
+  {{- $ogImage = index .Params.images 0 -}}
+{{- else if .Site.Params.images -}}
+  {{- $ogImage = index .Site.Params.images 0 -}}
+{{- end -}}
+
+{{- if $ogImage -}}
+  <meta property="og:image" content="{{ $ogImage | absURL }}" />
+{{- end -}}

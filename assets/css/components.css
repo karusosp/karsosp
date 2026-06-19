@@ -2,7 +2,7 @@
    Components
    ========= */
 
-/* navigation */ 
+/* navigation */
 .site-header {
   max-width: var(--measure);
   margin: auto;
@@ -24,6 +24,7 @@
   padding-left: 0rem;
   color: var(--muted);
 }
+
 #theme-toggle {
   background-color: transparent;
   border: none;
@@ -33,13 +34,13 @@
 }
 
 
-/* home */ 
+/* home */
 .home-description {
   text-align: justify;
   text-justify: inter-word;
-  hyphen: auto;
   text-wrap: pretty;
 }
+
 .home-image {
   width: 150px;
   height: 150px;
@@ -61,7 +62,7 @@
 .home-posts a {
   color: var(--muted);
   margin: 0rem;
-  text-decoration: underline; 
+  text-decoration: underline;
   text-decoration-style: dashed;
 }
 
@@ -77,13 +78,14 @@
   margin-top: 0rem;
   margin-bottom: 0rem;
 }
+
 .home-posts time {
   margin-top: 0rem;
   font-style: italic;
   color: #44444E;
 }
 
-/* footer */ 
+/* footer */
 footer {
   max-width: var(--measure);
   margin: auto;
@@ -110,10 +112,11 @@ footer a {
   margin-left: 0rem;
 }
 
-.post-list h3{
+.post-list h3 {
   font-size: 1.4rem;
   font-weight: 600;
 }
+
 .post-list a {
   color: var(--muted)
 }
@@ -121,6 +124,7 @@ footer a {
 .post-list p {
   padding-left: 1rem;
 }
+
 .post-time {
   color: #44444E;
   font-style: italic;
@@ -128,3 +132,31 @@ footer a {
   text-align: left;
 }
 
+/* table of contents */
+.toc {
+  background: var(--bg-muted);
+  border: 1px solid var(--border);
+  padding: 1rem 1rem;
+  margin: 2rem 0;
+  font-size: 1rem;
+}
+
+.toc summary {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.toc nav#TableOfContents ul {
+  padding-left: 2rem;
+  margin: 0.0rem 0 0;
+}
+
+.toc a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}

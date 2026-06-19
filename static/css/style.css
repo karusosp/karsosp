@@ -52,8 +52,6 @@ html.dark footer {
   border-top: 1px solid #fff;
 }
 
-html.dark .post-list {}
-
 nav #theme-toggle {
   color: inherit;
   font-size: 20px;
@@ -137,7 +135,7 @@ header h1 {
   margin-bottom: 0rem;
   margin-top: 0rem;
   text-align: center;
-  text-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 
@@ -305,7 +303,7 @@ footer p {
 }
 
 .home-box p {
-  text-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .home-box h2 {
@@ -378,7 +376,7 @@ a:hover {
   .home-content {
     margin: 2rem;
     padding-left: 2rem;
-    paading-right: 2rem;
+    padding-right: 2rem;
   }
 
 }

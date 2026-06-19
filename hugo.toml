@@ -1,5 +1,5 @@
 baseURL = "https://karso.xyz"
-languageCode = 'en-us'
+locale = 'en-us'
 title = "Karso's Meanderings"
 disableKinds = ["taxonomy"]
 [params]
@@ -15,3 +15,9 @@ disableKinds = ["taxonomy"]
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)']]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false

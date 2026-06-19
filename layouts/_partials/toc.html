@@ -1,0 +1,9 @@
+{{ $toc := .TableOfContents }}
+{{ if ge (len (findRE "<li>" $toc)) 2 }}
+<nav class="toc" aria-label="Table of contents">
+  <details open>
+    <summary>Table of Contents</summary>
+    {{ $toc }}
+  </details>
+</nav>
+{{ end }}

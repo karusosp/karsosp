@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.6;
   color: var(--fg);
   background-color: var(--bg);
@@ -158,7 +158,7 @@ td {
 /* typography scaling */
 @media (min-width: 768px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.65;
   }
 }
