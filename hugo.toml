@@ -14,7 +14,7 @@ disableKinds = ["taxonomy"]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
-          inline = [['\(', '\)']]
+          inline = [['\(', '\)'], ['$', '$']]
     [markup.goldmark.renderer]
       unsafe = true
   [markup.tableOfContents]
