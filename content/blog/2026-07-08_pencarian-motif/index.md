@@ -6,7 +6,7 @@ summary: "Sebuah catatan untuk memahami Chapter 2 dari buku Bioinformatics Algor
 draft: false
 description: "Sebuah catatan untuk memahami pencarian motif dalam analisis sekuens DNA"
 images: 
-  - "blog/pencarian-motif/randomized_motif_search.png"
+  - "blog/2026-07-08_pencarian-motif/randomized_motif_search.png"
 ---
 > Artikel ini adalah upaya penyelesaian masalah yang ada di buku _Bioinformatics Algorithm Vol 1_ karya Pavel Pevzner dan Phillip Compeau, spesifiknya pada _Chapter 2_ tentang _Finding Regulatory Motifs_. Semua gambar dan materi oleh karenanya berasal dari buku tersebut.
 
