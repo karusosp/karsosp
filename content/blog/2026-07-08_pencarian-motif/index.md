@@ -401,21 +401,21 @@ Setelah menjalankan algoritma untuk mencari motif dengan $k=20$ ini sebanyak 100
 
 | K   | Sequence             | Score |
 | --- | -------------------- | ----- |
-| 6   | GCCCGG               | 5     |
-| 7   | GCGCCGG              | 9     |
-| 8   | GCCCCGGC             | 11    |
-| 9   | CCGCGGCCG            | 16    |
-| 10  | GGCCGCGGCC           | 19    |
-| 11  | GGCCGCGGCCA          | 20    |
-| 12  | GCCGCCGGCGCG         | 24    |
-| 13  | CGCCGCGGCGGGC        | 28    |
-| 14  | CCGCGGGGCGCCGG       | 31    |
-| 15  | CGCCGCCGACGGCGC      | 35    |
-| 16  | CCGCCGGCGGGCCGCG     | 39    |
-| 17  | CGCCGCGGCCGGGCCGC    | 43    |
-| 18  | GGCCGCCGTCGGGCCGCG   | 46    |
-| 19  | GTCGGCACCGGCGAGGCCG  | 50    |
-| 20  | GGGGACCTACGTCCCTAGCC | 55    |
+| 6   | ACGGCG               | 5     |
+| 7   | CTTCGGC              | 9     |
+| 8   | CTTCGGCC             | 11    |
+| 9   | GGCGGGGAC            | 16    |
+| 10  | ATCGACCCCA           | 19    |
+| 11  | GACCATCGGCC          | 20    |
+| 12  | GACCTACGGCCC         | 24    |
+| 13  | GGACCTACGGCCC        | 28    |
+| 14  | GGACTTACGGCCCT       | 31    |
+| 15  | GGACTAACGGCCCTA      | 35    |
+| 16  | CGGGACCTACGTCCCT     | 39    |
+| 17  | CGGGACCTACGTCCCTA    | 43    |
+| 18  | GGGACCTACGTCCCTAGC   | 46    |
+| 19  | GGGACCTACGGCCCTAGCC  | 50    |
+| 20  | CGGGACCTACGTCCCTAGCC | 55    |
 
 
 Hasil dari _Randomized Algorithm_ di atas memiliki skor yang konsisten lebih baik (lebih rendah) dibandingkan hasil _greedy algorithm_, meskipun untuk waktu eksekusinya lebih lambat. Tetapi, apabila sedikit jeli, akan terlihat di beberapa hasil, _Randomized Algorithm_ memiliki nilai skor lebih tinggi. Hal ini tak terhindarkan karena memang _nature_ dari algoritma ini yang probabilistik, sehingga hasil _running_ bisa berbeda-beda; hasilnya seringkali lebih baik daripada _greedy algorithm_ tetapi terkadang tidak. Namun, keuntungan dari algoritma ini adalah kita bisa membuat hasilnya memiliki skor lebih rendah lagi apabila kita melakukan iterasi lebih banyak lagi, misalkan 10000; meskipun dengan catatan bahwa waktu eksekusinya akan lebih lambat lagi.
