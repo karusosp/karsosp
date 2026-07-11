@@ -2,7 +2,7 @@
 title: "Exploring De Novo Bacterial Assembly: Comparing Short-Read Only and Long-Read Only Assembly"
 author: "Karso Suryo Putro"
 date: 2026-06-07
-summary: "Here, I perform and compare bacterial genome assembly that came from short-read illumina dataset to long-read dataset that came from both Nanopore and PacBio sequencing technology" 
+summary: "Comparing bacterial genome assembly that came from short-read illumina dataset to long-read datasets" 
 draft: false
 images: 
   - "blog/2026-06-07_bacterial-wgs/genome_assembly_no_desc.png"

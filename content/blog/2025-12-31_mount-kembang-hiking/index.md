@@ -1,8 +1,6 @@
 ---
 title: "Mount Kembang hiking experience"
-summary: "I noted several things that occured during this hiking: the beauty of
-dense mountainous forest, mistakes made along the journey, and a coarse
-rumination on the hiking as a metaphor for life."
+summary: "I noted several things that occured during this hiking: the beauty of dense mountainous forest, mistakes made along the journey, and a coarse rumination on hiking as a metaphor for life."
 date: 2025-12-31
 draft: false
 ---

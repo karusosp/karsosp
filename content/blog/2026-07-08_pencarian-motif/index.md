@@ -2,7 +2,7 @@
 title: "Pencarian Regulatory Motif pada Bakteri TBC (Mycobacterium tuberculosis)"
 author: "Karso Suryo Putro"
 date: 2026-07-08
-summary: "Sebuah catatan untuk memahami Chapter 2 dari buku Bioinformatics Algorithm Vol.1" 
+summary: "Sebuah catatan untuk memahami Chapter 2 dari buku Bioinformatics Algorithm Vol.I" 
 draft: false
 description: "Sebuah catatan untuk memahami pencarian motif dalam analisis sekuens DNA"
 images: 

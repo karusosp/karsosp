@@ -16,8 +16,8 @@
   --bg-header: #FFFFFF;
 
   /* typography */
-  --font-body: "Goudy Bookletter 1911", regular;
-  --font-heading: "Fanwood", regular;
+  --font-body: "Goudy Bookletter 1911", serif;
+  --font-heading: "Fanwood", serif;
 
   /* sizes */
   --measure: 50rem;

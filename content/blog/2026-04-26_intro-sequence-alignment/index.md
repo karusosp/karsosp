@@ -2,13 +2,12 @@
 title: "Introduction to Sequence Alignment"
 author: Karso Suryo Putro
 date: 2026-04-26
-summary: Here I introduce the basic of sequence of alignment and demonstrate it by implementing the Needleman-Wunsch algorithm from scratch in R
+summary: Introducing the basic of sequence alignment and demonstrate it by implementing the Needleman-Wunsch and Smith-Waterman algorithms from scratch using R
 description: A brief exploration into the absolute basic of sequence alignment and how the algorithm really work
 images: 
-- intro-to-seq-alignment-1/post-cover.png
+- "blog/2026-04-26_intro-sequence-alignment/post-cover.png"
 draft: false
 ---
-
 
 One of the most important thing to do in biology is to compare biological information, which mostly exist in the form of sequences. This is called sequence alignment and is of great importance as the comparison between sequences can provide important biological interpretation, such as finding evolutionary distance, predicting sequence's structure and function based on annotated sequence database, or detecting anomalies in a biological system. It is not an exageration to say that sequence alignment is the backbone of bioinformatics, the study of complex biological data. Here, I would like to explore the common techniques of sequence alignment by implementing the algorithms in R from scratch with the hope of understanding these fundamental techniques even more.
 In this blog, firstly I would like to describe the need of efficient algorithm by demonstrating that the naive approach to align two sequences, that is by iterating over all possible alignment and find the best one by some scoring system, is not at all feasible in the real world as the operating cost of such method is exceedingly high. And after showing that naive approach is not feasible, I will discuss about a more efficient approach in the form of **dynamic programming**, of which the implementation of Needleman-Wunsch Algorithm is discussed.
@@ -201,21 +200,9 @@ cat(" Seq1  :", result$align1, "(Seq Length ", nchar(seq1), ")", "\n",
      Seq2  :                                                 AGGTTTAC  (Seq Length  10) 
      Score : 0
 
-As you can see from the result above, the local alignment of SWA algorithm only
-align to a specific region that provide highest similarity score. As such, it is
-appropriate to apply this algorithm for database search. 
-# Conclusion
-In this article, I've explained what sequence alignment is, why it is important, and demonstrated the need of efficient solution in the form of dynamic programming. 
-This is the absolute basic of sequence alignment or sequence analysis in general and there are lot area to explore.
-However, the understanding of basic mechanism of the algorithm of sequence is
-very important for learning bioiformatics, especially for non-technical biologists that are the user of such kind of tools. 
-The user of scientific tools must not only use the tool appropriately according to the
-manual, but also need to understand the underlying mechanism so as not to
-confuse themselves. It is my hope that this article will provide some kind of
-enlightnment for the reader. If you find something confusing to my explanation
-or the code I implement, feel free to contact me.
+As you can see from the result above, the local alignment of SWA algorithm only align to a specific region that provide highest similarity score. As such, it is appropriate to apply this algorithm for database search. 
 
-In the future article, I will try to discuss more about what tools that are
-available for researcher in the context of sequence alignment and how to use it
-to generate biological insight. 
+# Conclusion
+In this article, I've explained what sequence alignment is, why it is important, and demonstrated the need of efficient solution in the form of dynamic programming. This is the absolute basic of sequence alignment or sequence analysis in general and there are lot area to explore. However, the understanding of basic mechanism of the algorithm of sequence is very important for learning bioinformatics, especially for non-technical biologists that are the user of such kind of tools. 
+The user of scientific tools must not only use the tool appropriately according to the manual, but also need to understand the underlying mechanism so as not to confuse themselves. It is my hope that this article will enlighten some readers. If you find something confusing to my explanation or the code I implement, feel free to ask me.
 
