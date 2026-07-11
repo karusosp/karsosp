@@ -18,8 +18,8 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: var(--font-body);
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.5;
   color: var(--fg);
   background-color: var(--bg);
 }
@@ -39,6 +39,7 @@ h3,
 h4,
 h5,
 h6 {
+  color: var(--heading-color);
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.25;
@@ -46,21 +47,18 @@ h6 {
 }
 
 h1 {
-  font-size: 1.5rem;
-}
-
-h2 {
-  font-size: 1.3rem;
-}
-
-h3 {
   font-size: 1.2rem;
 }
 
-h4 {
+h2 {
   font-size: 1.1rem;
 }
 
+h3 {
+  font-size: 1rem;
+}
+
+h4,
 h5,
 h6 {
   font-size: 1rem;
@@ -78,7 +76,9 @@ ol {
 
 /* links */
 a {
-  color: var(--link-font)
+  color: var(--link-font);
+  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 a:hover {
@@ -155,10 +155,49 @@ td {
   border: 1px solid var(--border);
 }
 
+code,
+kbd,
+pre,
+samp {
+  font-family: 'Courier Prime', 'PT Mono', monospace;
+  font-size: 0.8em;
+}
+
 /* typography scaling */
 @media (min-width: 768px) {
   body {
     font-size: 16px;
     line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 1rem 0 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1.2rem;
   }
 }

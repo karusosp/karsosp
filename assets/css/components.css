@@ -42,8 +42,8 @@
 }
 
 .home-image {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   display: block;
@@ -53,17 +53,17 @@
 }
 
 
-
 .home-posts h1 {
-  font-weight: 700;
+  font-weight: 600;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .home-posts a {
   color: var(--muted);
   margin: 0rem;
-  text-decoration: underline;
-  text-decoration-style: dashed;
+  text-decoration: none;
+  text-decoration-style: none;
 }
 
 .home-posts a:hover {
@@ -71,7 +71,7 @@
 }
 
 .home-posts p {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 
 .home-posts h3 {
@@ -113,12 +113,19 @@ footer a {
 }
 
 .post-list h3 {
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-decoration: none;
 }
 
 .post-list a {
-  color: var(--muted)
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.post-list a:hover {
+  color: var(--link-font);
+  text-decoration: underline;
 }
 
 .post-list p {
@@ -142,8 +149,9 @@ footer a {
 }
 
 .toc summary {
-  font-family: var(--font-heading);
-  font-weight: 900;
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
