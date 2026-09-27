@@ -1,6 +1,6 @@
 ---
 date: '2026-02-03T08:25:33+07:00'
-draft: false
+draft: true
 title: 'On myself and happiness'
 summary: "A brief account of my reflection about myself and what I should pursue"
 ---

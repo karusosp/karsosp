@@ -2,7 +2,7 @@
 title: "Mount Kembang hiking experience"
 summary: "I noted several things that occured during this hiking: the beauty of dense mountainous forest, mistakes made along the journey, and a coarse rumination on hiking as a metaphor for life."
 date: 2025-12-31
-draft: false
+draft: true
 ---
 Two days ago, to be specific on 29 december 2025, i hiked Mount Kembang with my friend. The two of us started hiking at 15.45. It was drizzling; we were considering whether we would hiked that day or waiting till tomorrow where the weather is more comfortable for us newbs. However, we decided to try to hike that day anyway, to feel the situation and if we felt that it were too hard for us, we could just went back to basecamp. 
 

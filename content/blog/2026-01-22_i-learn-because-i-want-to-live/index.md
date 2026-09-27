@@ -3,7 +3,7 @@ title: "I learn because I want to live"
 author: "Karso Suryo Putro"
 date: 2026-01-22
 summary: "An attempt to reflect to my own desire for knowledge."
-draft: false
+draft: true
 ---
 People learn for many kind of reason. Most of them, I think, learn so that they can live a more comfortable life; that is they learn to gain a specific knowledge that can be used through various means to generate money. However, for some, including me, learning is so much more than a mean for survival; for us, learning is a priority in life. Here in this writing I want to reflect this feeling of mine toward learning.
 

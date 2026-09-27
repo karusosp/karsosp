@@ -166,7 +166,7 @@ samp {
 /* typography scaling */
 @media (min-width: 768px) {
   body {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.65;
   }
 
