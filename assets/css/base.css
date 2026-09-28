@@ -18,10 +18,12 @@ body {
   margin: 0;
   padding: 1rem;
   font-family: var(--font-body);
-  font-size: 13px;
+  font-size: 16px;
   line-height: 1.5;
   color: var(--fg);
   background-color: var(--bg);
+  text-align: justify;
+  justify-content: center;
 }
 
 /* reading width */
@@ -44,6 +46,7 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   margin: 1rem 0 0.5rem;
+  text-align: left;
 }
 
 h1 {
@@ -166,7 +169,7 @@ samp {
 /* typography scaling */
 @media (min-width: 768px) {
   body {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1.65;
   }
 
